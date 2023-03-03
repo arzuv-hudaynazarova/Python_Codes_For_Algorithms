@@ -14,7 +14,7 @@ Brute Force algoritması ise, tüm olası çözümleri deneyerek sonuca ulaşan 
 En büyük sayıyı bulmak için Linear Search algoritması, her elemanı tek tek kontrol ederek bulur. Bu nedenle, verilen bir dizinin en büyük sayısını bulmak için bu yöntem oldukça hızlıdır. Ancak, Brute Force algoritması tüm olası sayıları tarayarak en büyük sayıyı bulacağından, bu durumda daha yavaş çalışır.
 
 
-# 2 ödevin açıklama kısmı:
+# 4 ödevin açıklama kısmı:
    Veri sıralama işlemi için en iyi algoritma hangisidir ve neden? Önerdiğiniz algoritmayı rastgele oluşturulmuş 10000 sayılık bir dizi üzerinde gerçekleştirin. Çalışma süresini belirtin. Aynı dizi üzerinde BruteForce bir algoritmanın çalışma süresini hesaplayın ve iki algoritmayı kıyaslayın. Dilediğiniz bir programlama dilini kullanabilirsiniz. Her iki algoritma için herhangi bir hazır fonkisyon kullanılmamalıdır. Örnek: Python dilinde sort() metodu sıralama yapamaktadır. Bu tarz hazır fonksiyonlar kesinlikle kabul edilmeyecektir. (Kodlar Github üzerinden gönderilmeli.)
 
 En iyi sıralama algoritması, veri boyutuna bağlı olarak değişebilir. Ancak, genellikle, en iyi performansı sağlamak için hızlı sıralama (quick sort) veya birleştirme sıralaması (merge sort) gibi böl ve yönet algoritmaları tercih edilir.
