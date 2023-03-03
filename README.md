@@ -35,7 +35,7 @@ BruteForce sıralama algoritması, bir diziyi sıralamak için tüm elemanların
 
 Yukarıdaki kod parçasında, merge sort ve quick sort algoritmaları örnek olarak gösterilmiş ve her iki algoritma da rastgele oluşturulan 10000 elemanlı bir dizi üzerinde uygulanmıştır. Çalışma süreleri, zaman modülü yardımıyla ölçülmüştür.
 
-Çıktıya baktığımızda, merge sort'un çalışma süresinin quick sort'a kıyasla daha kısa olduğunu görüyoruz. Ayrıca, BruteForce algoritması ile sıralama işleminin oldukça yavaş olduğu da görülebilir.
+Genellikle merge sort'un çalışma süresinin quick sort'a kıyasla daha kısadır. Ayrıca, BruteForce algoritması ile sıralama işleminin oldukça yavaş olduğuda bilinmektedir.
 
 Sonuç olarak, büyük veri setleri için merge sort algoritması tercih edilen bir seçenek olarak kabul edilir. Ancak, veri setinin boyutu küçükse veya bellek kullanımı sınırlıysa, quick sort veya diğer sıralama algoritmaları tercih edilebilir.
 
