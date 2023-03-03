@@ -22,3 +22,20 @@ En iyi sıralama algoritması, veri boyutuna bağlı olarak değişebilir. Ancak
 Hızlı sıralama, bir bölme işlemi ile çalışır. Öncelikle bir anahtar eleman seçilir ve dizinin bu anahtar elemanına göre iki parçaya ayrılması işlemi gerçekleştirilir. Daha sonra, bu iki parçanın her biri için aynı işlem tekrar edilir. Bu işlem, parçaların tek elemanlı hale gelinceye kadar tekrar edilir. Sonunda, tüm parçalar birleştirilir ve sıralı dizi oluşturulur. Hızlı sıralama, en kötü durumda bile O(n log n) karmaşıklığına sahiptir ve pratikte çok hızlı çalışır.
 
 Birleştirme sıralaması, bir dizi parçayı ayrı ayrı sıralar ve daha sonra bu sıralanmış parçaları birleştirir. Bir parçanın sıralanması, parça tek elemanlı hale gelinceye kadar tekrarlanır. Bu yöntem, en kötü durumda bile O(n log n) karmaşıklığına sahiptir ve verimli bir şekilde çalışır.
+
+
+
+Burada yapılan işlem, rastgele bir dizi oluşturmak ve bu diziyi üç farklı sıralama algoritması ile sıralamaktır: merge sort, quick sort ve BruteForce sıralama algoritması.
+
+Merge sort, n log n zamanında çalışan ve istikrarlı bir algoritma olarak bilinir. Bu nedenle, 10000 elemanlı bir diziyi sıralamak için oldukça hızlı bir seçenek olarak kabul edilir.
+
+Quick sort, en kötü durumda n^2 zamanında çalışabilen bir algoritmadır. Ancak, ortalama durumda n log n zamanında çalışır ve sıralama işlemini gerçekleştirmek için minimum bellek kullanır.
+
+BruteForce sıralama algoritması, bir diziyi sıralamak için tüm elemanların karşılaştırılması gerektiği n^2 zamanında çalışan bir algoritmadır. Bu nedenle, büyük veri setleri için yavaş bir seçenek olarak kabul edilir.
+
+Yukarıdaki kod parçasında, merge sort ve quick sort algoritmaları örnek olarak gösterilmiş ve her iki algoritma da rastgele oluşturulan 10000 elemanlı bir dizi üzerinde uygulanmıştır. Çalışma süreleri, zaman modülü yardımıyla ölçülmüştür.
+
+Çıktıya baktığımızda, merge sort'un çalışma süresinin quick sort'a kıyasla daha kısa olduğunu görüyoruz. Ayrıca, BruteForce algoritması ile sıralama işleminin oldukça yavaş olduğu da görülebilir.
+
+Sonuç olarak, büyük veri setleri için merge sort algoritması tercih edilen bir seçenek olarak kabul edilir. Ancak, veri setinin boyutu küçükse veya bellek kullanımı sınırlıysa, quick sort veya diğer sıralama algoritmaları tercih edilebilir.
+
