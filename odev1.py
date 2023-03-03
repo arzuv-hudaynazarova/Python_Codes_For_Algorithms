@@ -1,45 +1,52 @@
-1.	Bir dizi içindeki en büyük sayıyı en hızlı bulmak için hangi algoritmayı kullanırsınız? 
-Önerdiğiniz algoritmayı rastgele oluşturulmuş 10000 sayılık bir dizi üzerinde gerçekleştirin.
-Çalışma süresini belirtin. Aynı dizi üzerinde BruteForce bir algoritmanın çalışma süresini hesaplayın ve iki algoritmayı kıyaslayın.
-Dilediğiniz bir programlama dilini kullanabilirsiniz. Her iki algoritma için herhangi bir hazır fonkisyon kullanılmamalıdır.
-Örnek: Python dilinde max() metodu en büyük elemanı bulmaktadır. Bu tarz hazır fonksiyonlar kesinlikle kabul edilmeyecektir. 
-(Kodlar Github üzerinden gönderilmeli.)
+import time
+import random
+
 
 # Kendi hazırladığım algoritma:
-import time
-
-def find_max(arr):
-    max_num = arr[0]
-    for num in arr:
-        if num > max_num:
-            max_num = num
+def max_element(dizi):
+    max_num = dizi[0]
+    for i in range(1, len(dizi)):
+        if dizi[i] > max_num:
+            max_num = dizi[i]
     return max_num
 
-# Rastgele 10000 sayılı bir dizi oluşturalım
-import random
-arr = [random.randint(0, 1000) for i in range(10000)]
 
-# "max" algoritmasının çalışma süresi
-start_time = time.time()
-max_num = find_max(arr)
-end_time = time.time()
-print("En büyük sayı:", max_num)
-print("max algoritmasının çalışma süresi:", end_time - start_time, "saniye")
+# Rastgele 10000 sayılı bir dizi oluşturalım en büyük sayıyı gösterme:
+dizi = [random.randint(0, 10000) for _ in range(10000)]
+print(max_element(dizi))
+
+
 
 #BruteForce algoritması:
-def brute_force_max(arr):
-    n = len(arr)
-    max_num = arr[0]
-    for i in range(n):
-        for j in range(i+1, n):
-            if arr[j] > max_num:
-                max_num = arr[j]
+def max_element_bruteforce(dizi):
+    max_num = dizi[0]
+    for i in range(len(dizi)):
+        for j in range(len(dizi)):
+            if dizi[j] > max_num:
+                max_num = dizi[j]
     return max_num
 
-# BruteForce algoritmasının çalışma süresi
-start_time = time.time()
-max_num = brute_force_max(arr)
-end_time = time.time()
-print("En büyük sayı:", max_num)
-print("BruteForce algoritmasının çalışma süresi:", end_time - start_time, "saniye")
 
+# Rastgele 10000 sayılı bir dizi oluşturalım ve ekranda en büyük sayıyı gösterme:
+dizi = [random.randint(0, 10000) for _ in range(10000)]
+print(max_element_bruteforce(dizi))
+
+
+# Rastgele 10000 sayılı bir dizi oluşturalım:
+dizi = [random.randint(0, 10000) for _ in range(10000)]
+
+
+#"Linear Search" algoritmasının çalışma süresi:
+start_time = time.time()
+max_num = max_element(dizi)
+end_time = time.time()
+print("En büyük sayı: ", max_num)
+print("Linear Search çalışma süresi: ", end_time - start_time,  "saniye")
+
+
+# BruteForce algoritmasının çalışma süresi:
+start_time = time.time()
+max_num = max_element_bruteforce(dizi)
+end_time = time.time()
+print("En büyük sayı: ", max_num)
+print("BruteForce çalışma süresi: ", end_time - start_time , "saniye")
