@@ -1,9 +1,6 @@
 import random
 import time
 
-# örnek rastgele bir 10000 sayı oluşturacağız:
-arr = [random.randint(1, 1000) for i in range(10000)]
-
 # Merge Sort Algoritması:
 def merge_sort(arr):
     if len(arr) <= 1:
@@ -59,7 +56,13 @@ def BruteForceSort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
-# Sıralama süresi, karşılaştırılması işlemi: 
+
+
+# Rastgele 10000 sayılı bir dizi oluşturalım:
+arr = [random.randint(1, 1000) for i in range(10000)]
+
+
+# Sıralama süresi, karşılaştırılması işlemi:
 
 # 1.  Merge Sort algoritması ile sıralama ve çalışma süresinin ölçülmesi
 start_time = time.time()
@@ -74,10 +77,9 @@ end_time = time.time()
 print("Quick Sort çalışma süresi: ", end_time - start_time, "saniye")
 
 
-# 1.  BruteForce algoritması ile sıralama ve çalışma süresinin ölçülmesi
+# 3.  BruteForce algoritması ile sıralama ve çalışma süresinin ölçülmesi
 start = time.time()
 BruteForceSort(arr)
 end = time.time()
 print("BruteForce çalışma süresi: ", end - start, "saniye")
-
 
