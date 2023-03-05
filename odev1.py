@@ -1,9 +1,6 @@
 import time
 import random
 
-# Rastgele 10000 sayılı bir dizi oluşturalım:
-dizi = [random.randint(1, 10000) for i in range(10000)]
-
 # Linear Search algoritma:
 def linear_search(dizi):
     max_num = dizi[0]
@@ -22,7 +19,8 @@ def bruteforce(dizi):
                 max_num = dizi[j]
     return max_num
 
-
+# Rastgele 10000 sayılı bir dizi oluşturalım:
+dizi = [random.randint(1, 10000) for i in range(10000)]
 
 #"Linear Search" algoritmasının çalışma süresi:
 start_time = time.time()
